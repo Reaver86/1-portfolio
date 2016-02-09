@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "semi": [2, "always"],
+    "no-nested-ternary": 1,
+    "space-before-function-paren": [1, "never"],
+    "space-before-blocks": [1, "always"],
+    "padded-blocks": [1, "never"],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "linebreak-style": [2, "windows"],
+    "eol-last": 0,
+    "eqeqeq": 0,
+    "quotes": [2, "double", "avoid-escape"],
+    "brace-style": [1, "stroustrup", { "allowSingleLine": true }]
+  },
+  "env": {
+      "node": 1,
+      "es6": true,
+      "browser": true,
+      "jquery": true
+  },
+  "extends": "eslint:recommended"
+}
