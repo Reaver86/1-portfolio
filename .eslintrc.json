@@ -9,7 +9,7 @@
     "linebreak-style": [2, "windows"],
     "eol-last": 0,
     "eqeqeq": 0,
-    "quotes": [2, "double", "avoid-escape"],
+    "quotes": [2, "single", "avoid-escape"],
     "brace-style": [1, "stroustrup", { "allowSingleLine": true }]
   },
   "env": {
