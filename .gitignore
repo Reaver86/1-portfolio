@@ -1,4 +1,6 @@
-prod
+#usually I would exclude the produced file, but here they are included
+#so they can be evaluated by the udacity team
+#prod
 
 # Created by https://www.gitignore.io/api/windows,node,sass
 
