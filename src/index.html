@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Meine Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/app.min.js" async></script>
+  </head>
+
+  <body>
+    <header id="top" class="header">
+      <nav class="nav nav--transparent box-shadow">
+        <div class="nav__logo">
+          <a title="Jump to Top" href="#">
+            <img src="images/logo.svg" alt="Logo">
+          </a>
+        </div>
+        <div class="nav__links">
+          <ul class="list">
+            <li class="list__item">
+              <a class="list__link list__link--me" title="Jump to About Me" href="#me">About Me</a>
+            </li>
+            <li class="list__item">
+              <a class="list__link list__link--work" title="Jump to Work" href="#work">Work</a>
+            </li>
+            <li class="list__item">
+              <a class="list__link list__link--contact" title="Jump to Contact" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="header__title">Alexander Schuster</h1>
+      <p class="header__kicker">Front-End Footsoldier</p>
+    </header>
+
+    <section id="section-me">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>About me</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-md-3 center-content">
+            <img src="images/alex.jpg" class="img-responsive img-circle orange-border inline-block" alt="Picture of Alexander Schuster">
+          </div>
+          <div class="col-sm-9 col-md-9">
+            <p class="light-padding">
+              Hey it's Alex. I studied math in Germany and then decided to get into computer science.
+              In my day job I develop backend services with java and started the FEND nanodegree,
+              because I want to broaden my knowledge. I'm 30 years old and happily married.
+              Besides computer science I really love Taiwan and their cuisine and I like watching movies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    Note to sizes solution:
+    Because of bootstrap an exact representation of the css is probably impossible
+    So I decided to go for a good approximation by analyzing actual image sizes with dev tools
+     -->
+    <section id="section-work">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Future Work</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <a href="teslime/index.html">
+              <img src="images/coffee-art-small.jpg" srcset="images/coffee-art-small.jpg 360w, images/coffee-art-large.jpg 720w" sizes="(min-width: 767px) 45vw, 100vw" class="img-responsive" alt="First Project">
+              <h3>Resume</h3>
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <img src="images/coffee-1-large.jpg" srcset="images/coffee-1-small.jpg 360w, images/coffee-1-large.jpg 720w" sizes="(min-width: 767px) 45vw, 100vw" class="img-responsive" alt="Second Project">
+            <h3>Arcade Game</h3>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <img src="images/coffee-2-large.jpg" srcset="images/coffee-2-small.jpg 360w, images/coffee-2-large.jpg 720w" sizes="(min-width: 767px) 45vw, 100vw" class="img-responsive" alt="Third Project">
+            <h3>Website Optimization</h3>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <img src="images/coffee-green-large.jpg" srcset="images/coffee-green-small.jpg 360w, images/coffee-green-large.jpg 720w" sizes="(min-width: 767px) 45vw, 100vw" class="img-responsive" alt="First Project">
+            <h3>Neighborhood Map</h3>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <img src="images/coffee-espresso-large.jpg" srcset="images/coffee-espresso-small.jpg 360w, images/coffee-espresso-large.jpg 720w" sizes="(min-width: 767px) 45vw, 100vw" class="img-responsive" alt="Second Project">
+            <h3>Health Tracker</h3>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <img src="images/coffee-empty-large.jpg" srcset="images/coffee-empty-small.jpg 360w, images/coffee-empty-large.jpg 720w" sizes="(min-width: 767px) 45vw, 100vw" class="img-responsive" alt="Third Project">
+            <h3>Feed Reader Testing</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="section-contact">
+      <div class="footer__email">
+        <a class="link link--email" href="mailto:alexander.schuster@web.de" title="email">
+          <svg class="link__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+            <path d="M627 180c29 0 53 24 53 53v334c0 29-24 53-53 53H173c-29 0-53-24-53-53V233c0-29 24-53 53-53h454zm-7 113v-53L400 387 180 240v53l220 147z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="footer__social-icons">
+        <a class="link" href="https://www.facebook.com/ohheyitsalex" target="_blank" title="facebook">
+          <svg class="link__icon" role="img" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <path d="M445 643h-90V419h-75v-87h75v-64q0-55 32-86 30-29 80-29 28 0 67 3v78h-47q-42 0-42 38v60h86l-11 87h-75v224z"/>
+          </svg>
+        </a>
+        <a class="link" href="https://twitter.com/heyitsalex86" target="_blank" title="twitter">
+          <svg class="link__icon" role="img" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <path d="M679 239s-21 34-55 57c7 156-107 329-314 329-103 0-169-50-169-50s81 17 163-45c-83-5-103-77-103-77s23 6 50-2c-93-23-89-110-89-110s23 14 50 14c-84-65-34-148-34-148s76 107 228 116c-22-121 117-177 188-101 37-6 71-27 71-27s-12 41-49 61c30-2 63-17 63-17z"/>
+          </svg>
+        </a>
+        <a class="link" href="https://github.com/Reaver86" target="_blank" title="github">
+          <svg class="link__icon" role="img" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <path d="M400 139c144 0 260 116 260 260 0 115-75 213-178 247-9 3-17-2-17-13v-71c0-35-18-48-18-48 57-6 119-28 119-128 0-44-27-70-27-70s14-29-2-69c0 0-22-7-72 27-42-12-88-12-130 0-50-34-72-27-72-27-16 40-2 69-2 69s-27 26-27 70c0 100 62 122 119 128 0 0-14 10-17 35-15 7-53 18-76-22 0 0-13-25-39-27 0 0-26 0-2 16 0 0 17 8 29 38 0 0 16 51 88 35v44c0 11-9 16-18 13-103-34-178-132-178-247 0-144 116-260 260-260z"/>
+          </svg>
+        </a>
+        <!-- German Pendant of LinkedIn: -->
+        <a class="link" href="https://www.xing.com/profile/Alexander_Schuster40" target="_blank" title="xing">
+          <svg class="link__icon" role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 200 200">
+          		<path d="M50.105,64.213c-1.242,0-2.288,0.437-2.812,1.29c-0.545,0.881-0.461,2.015,0.119,3.163    l13.944,24.14c0.023,0.046,0.023,0.075,0,0.117l-21.914,38.67c-0.571,1.138-0.543,2.281,0,3.163    c0.526,0.85,1.454,1.406,2.696,1.406h20.624c3.083,0,4.57-2.081,5.625-3.982c0,0,21.43-37.902,22.264-39.374    C90.566,92.67,76.472,68.08,76.472,68.08c-1.028-1.827-2.578-3.867-5.742-3.867H50.105L50.105,64.213z"/>
+          		<path d="M136.748,28.688c-3.08,0-4.415,1.94-5.521,3.929c0,0-44.431,78.793-45.894,81.379    c0.075,0.141,29.304,53.763,29.304,53.763c1.023,1.828,2.604,3.929,5.762,3.929H141c1.242,0,2.213-0.469,2.736-1.315    c0.55-0.88,0.533-2.043-0.043-3.188l-29.073-53.121c-0.028-0.041-0.028-0.094,0-0.135l45.662-80.739    c0.573-1.139,0.587-2.302,0.043-3.183c-0.526-0.85-1.503-1.317-2.742-1.317L136.748,28.688L136.748,28.688L136.748,28.688z"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer__copyright">Copyright © 2016 Alexander Schuster. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
