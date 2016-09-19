@@ -14,7 +14,7 @@ const plumber = require('gulp-plumber');
 const svgmin = require('gulp-svgmin');
 
 gulp.task('scripts', function() {
-  return gulp.src('./dev/js/**/*.js')
+  return gulp.src('./src/js/**/*.js')
     .pipe(plumber())
 		.pipe(sourcemaps.init())
 			.pipe(babel({
@@ -24,14 +24,14 @@ gulp.task('scripts', function() {
     	.pipe(concat('app.min.js'))
 		.pipe(sourcemaps.write('.'))
     .pipe(plumber.stop())
-    .pipe(gulp.dest('./prod/js/'))
+    .pipe(gulp.dest('./dist/js/'))
 		.pipe(browserSync.reload({
       stream: true
     }));
 });
 
 gulp.task('styles', function() {
-  return gulp.src('./dev/scss/**/*.scss')
+  return gulp.src('./src/scss/**/*.scss')
 		.pipe(sass())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
@@ -39,23 +39,23 @@ gulp.task('styles', function() {
 		}))
     .pipe(minifyCSS())
 		.pipe(concat('app.min.css'))
-    .pipe(gulp.dest('./prod/css/'))
+    .pipe(gulp.dest('./dist/css/'))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
 
 gulp.task('html', function() {
-  return gulp.src('./dev/index.html')
+  return gulp.src('./src/index.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./prod/'))
+    .pipe(gulp.dest('./dist/'))
 		.pipe(browserSync.reload({
       stream: true
     }));
 });
 
 gulp.task('images', function() {
-  return gulp.src('./dev/images/*.{png,jpg}')
+  return gulp.src('./src/images/*.{png,jpg}')
     .pipe(responsive({
       'bg-*.jpg': [
         {
@@ -97,38 +97,38 @@ gulp.task('images', function() {
         quality: 50
       }
     }))
-    .pipe(gulp.dest('./prod/images/'))
+    .pipe(gulp.dest('./dist/images/'))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
 
 gulp.task('svg', function() {
-  return gulp.src('./dev/images/*.svg')
+  return gulp.src('./src/images/*.svg')
       .pipe(svgmin())
-      .pipe(gulp.dest('./prod/images/'));
+      .pipe(gulp.dest('./dist/images/'));
 });
 
 gulp.task('fonts', function() {
-  return gulp.src('./dev/fonts/**/*')
-  .pipe(gulp.dest('./prod/fonts'))
+  return gulp.src('./src/fonts/**/*')
+  .pipe(gulp.dest('./dist/fonts'))
 });
 
 gulp.task('browserSync', function() {
   browserSync({
     port: 3030,
     server: {
-      baseDir: './prod'
+      baseDir: './dist'
     },
 		notify: false
   });
 });
 
 gulp.task('watch', ['browserSync', 'scripts', 'styles', 'html', 'images', 'svg'], function() {
-  gulp.watch('dev/js/**/*.js', ['scripts']);
-  gulp.watch('dev/scss/**/*.scss', ['styles']);
-  gulp.watch('dev/index.html', ['html']);
-	gulp.watch('dev/images/**/*', ['images', 'svg']);
+  gulp.watch('src/js/**/*.js', ['scripts']);
+  gulp.watch('src/scss/**/*.scss', ['styles']);
+  gulp.watch('src/index.html', ['html']);
+	gulp.watch('src/images/**/*', ['images', 'svg']);
 });
 
 gulp.task('default', ['watch']);
