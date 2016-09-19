@@ -1,4 +1,6 @@
-# Project 1: Portfolio
+# Website of Alexander Schuster
 
-This Project is part of the Udacity FEND nanodegree.
+This is my private website, which I'm updating irregularly as soon as I find time for it.
+
+# Develop locally
 It is built using npm and gulp, so you'll need to run "npm install" and "gulp" to get started.
